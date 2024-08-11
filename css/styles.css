@@ -1,7 +1,4 @@
-/* Color palatte
-
-
-*/
+/* General Styles */
 html {
 	box-sizing: border-box;
 }
@@ -9,23 +6,25 @@ html {
 	box-sizing: inherit;
 }
 body {
-	color:#343434;
+	color: #343434;
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat', san-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
 	line-height: 1.5;
 }
 
-img	{
+img {
 	width: 300px;
 }
 .image_float {
 	float: left;
-	margin-right: 10px;
+	margin-right: 20px;
 	margin-bottom: 0;
 	margin-top: 10px;
-	
+	width: 150px;
+	height: auto;
+	border-radius: 10px;
 }
 .content-left {
 	display: flex;
@@ -35,187 +34,266 @@ img	{
 	font-weight: bold;
 	margin-bottom: 10px 0;
 	padding: 10px;
-
+	font-size: 14px;
 }
 
-.{
-	color: cc0066;
-	background-color: #58B09C;
-}
+/* Typography */
 h1 {
-	font-size: 70px;
-	line-height: 1;
+	font-size: 50px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+	font-family: 'Caveat', cursive;
 }
 h2 {
-	
 	font-size: 45px;
+	margin-bottom: 30px;
+	font-family: 'Caveat', cursive;
 }
 h2.sub-head {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	font-size: 30px;
 }
 
-
-h1, h2 {
-	font-family:'Caveat', cursive;
-	font-weight: 400;
-	margin: 0;
-}
-/*.text_right {
-	padding: 300px;
-	display: block;
-	margin: 0;
-	text-align: top;
-}*/
+/* Container Adjustments */
 .content-wrap {
 	max-width: 1200px;
 	width: 85%;
 	margin: 0 auto;
-	padding: 60px 0;
+	padding: 40px 0;
 	overflow: hidden;
 }
 
-.item-details h3 +p {
-	font-style: italic;
-	font-size: 15px;
-}
-
-.item-details h3 ~p {
-	margin: 0;
-}
-
-
-
-/* Profile
------------------------------------*/
-header {
-	background: #2F3061;
-	color:#F7FFF7;
-	text-align: center;
-
-}
+/* Base link styling for consistency */
 a {
-	color:#FFE66D;
+	color: #FFE66D; /* Set a consistent link color */
+	background-color: transparent; /* Remove background color for default state */
+	text-decoration: underline; /* Remove underline */
+	padding: 8px; /* Add padding for clickable area */
+	border-radius: 6px; /* Round corners */
+	/* transition: background-color 0.3s, color 0.3s; Smooth transition for hover effect */
 }
 
 a:hover {
-	text-decoration:underline;
-	color:#F7FFF7; 
+	background-color: rgba(47, 48, 97, 0.8); /* Consistent hover background color */
+	/* color: #3f1dd6; Hover text color */
+	text-decoration: underline; /* Add underline on hover */
 }
 
+/* Profile Section */
+header {
+	background: #2F3061;
+	color: #F7FFF7;
+	text-align: center;
+	padding: 40px 0;
+} 
 
-/* Projects
------------------------------------*/
+/* ABOUT Section */
+.about-section {
+	background-color: #938383; /* Pinkish background */
+	color: #F7FFF7;
+	padding: 60px 0;
+	text-align: left;
+}
+
+.about-section h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.about-section p {
+	font-size: 18px;
+	line-height: 1.6;
+	max-width: 800px;
+	margin: 0 auto 20px auto;
+}
+
+/* Projects Section */
 .Projects {
-		background: #A9D8B8;
+	background: #A9D8B8;
 }
+
 .Projects a {
 	color: #F7FFF7;
-	background: #2F3061; /*71B48D*/
-	text-decoration:none; 
-	padding: 8px;
-	border-radius: 6px;
-}
-.Projects a:hover {
-	background: rgba(47,48,97,80%);
-}
-.project-item{ 
-	overflow: hidden;
-	border-bottom: dashed;
-	border-width: 0.5px;
-	border-color: #FFE66D;
-	padding: 25px 0; 
- }
- .removeborder {
- 	border-bottom: none;
- }
-
- .removeborder img {
- 	height: 250px;
- }
-.project-item img {
-	float: left;
-	margin-right: 25px;
-}
-.project-item h3 {
-	margin-top: 0;
-}
-.btn {
 	background: #2F3061;
-	border-radius: 6px;
-	padding: 8px;
-	text-decoration: none;
-}
-.btn a:hover {
-	background: rgba(47,48,97,80%);
-
 }
 
+.Projects a:hover {
+	background: rgba(47, 48, 97, 0.8);
+}
 
-/* Work Experience
------------------------------------*/
+/* Work Experience Section */
 .work-experience {
 	background: #A1C6D7;
 }
+
 .job-item {
 	display: grid;
-	grid-template-columns:1fr 2fr;
+	grid-template-columns: 1fr 2fr;
 	column-gap: 30px;
-	border-bottom: dashed;
-	border-width: 0.5px;
-	border-color: #FFE66D;
+	border-bottom: dashed 0.5px #FFE66D;
 }
+
 .job-summary {
-	margin-top: 0px;
+	margin-top: 0;
 }
+
 .textpad {
 	padding-top: 10px;
 	margin-top: 15px;
 }
-/* Education
------------------------------------*/
+
+/* Education Section */
 .Education {
 	background-image: url(../images/joanna-kosinska-unsplash.jpg);
 	background-size: cover;
 	background-position: top right;
 	padding: 100px;
+	color: #343434;
 }
- .Education.p {
- 	width: 60%;
- }
 
-/* Contact Info
------------------------------------*/
+.Education h3 {
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+.Education p {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+/* Projects Section */
+.Projects {
+    background: #A9D8B8;
+    padding: 60px 20px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between project items */
+}
+
+.project-item {
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    box-sizing: border-box;
+    padding: 30px; /* Increased padding for larger tiles */
+    background: #FFFFFF;
+    border-radius: 15px; /* Slightly increased border-radius for a more polished look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for emphasis */
+	min-height: 300px; /* Ensure tiles have a decent minimum height */
+    overflow: hidden; 
+    align-items: center; /* Center align content vertically */
+
+
+}
+
+.project-item img {
+    width: 30%; 
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    float: left; 
+    margin-right: 15px;
+	flex-shrink: 0; /* Prevent image from shrinking */
+} 
+
+
+
+.project-item h3 {
+    font-size: 30px; /* Slightly larger title */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.project-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.project-item a {
+    color: #2F3061;
+    background: #F7FFF7;
+    padding: 6px 10px; /* Reduce padding for button */
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+	margin-top: auto; /* Push the button to the bottom of the text */
+
+}
+
+.project-item a:hover {
+    background: #2F3061;
+    color: #FFFFFF;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+    }
+
+    .project-item {
+        flex: 1 1 100%;
+    }
+
+    .project-item img {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px 0; /* Reset margins for images on smaller screens */
+    }
+}
+
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+    }
+
+    .project-item {
+        flex: 1 1 100%;
+    }
+
+    .project-item img {
+        width: 100%; /* Ensure images take full width on small screens */
+    }
+}
+
+
+/* Footer Section */
 footer {
 	background: #343434;
-	color:#F7FFF7;
+	color: #F7FFF7;
 	text-align: center;
 	margin-right: 0;
+	padding: 5px 10px; /* Significantly reduce padding to minimize height */
+	font-size: 14px;
+
 }
+
 .contact-list {
 	list-style-type: none;
 	padding: 0;
-/*	display: flex;
-	justify-content: center;*/
-
+	margin: 0;
+	display: flex;
+	justify-content: center;
 }
+
+.contact-list li {
+	margin-right: 15px;
+}
+
+.contact-list li:last-child {
+	margin-right: 0;
+}
+
 .contact-list a {
-	padding: 15px;
-	display: inline-block;
-	margin:0;
-}
-ul.contact-list {
-	margin:0;
-}
-.contact-center {
-	padding: 15px;
-	display: inline-block;
-	color: #FFE66D;
-	text-decoration: underline;
-
+	padding: 8px 15px;
 }
 
-/*Responsive
----------------------------------------*/
+/* Responsive Adjustments */
 @media screen and (min-width: 616px) {
 	header, footer {
 		text-align: center;
@@ -230,10 +308,11 @@ ul.contact-list {
 		column-gap: 20px;
 	}
 	.contact-list {
-		display: flex; 
+		display: flex;
 		justify-content: center;
 	}
 }
+
 @media screen and (max-width: 615px) {
 	h1 {
 		font-size: 75px;
@@ -246,10 +325,17 @@ ul.contact-list {
 		line-height: 1;
 	}
 
+	.contact-list {
+		flex-direction: column;
+		align-items: center;
+	}
 
+	.contact-list li {
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
 
-
-
-
+	.contact-list li:last-child {
+		margin-bottom: 0;
+	}
 }
-
